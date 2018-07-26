@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayGame"
+    android:background="@drawable/bgnd">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/playGameGameDiff"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="No difficulty"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/F2"
+            android:text="F"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:padding="15dp"
+            android:background="@drawable/secondbutton"
+            android:layout_alignParentLeft="true"
+            android:rotation="90"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/A12"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:padding="15dp"
+            android:textSize="22sp"
+            android:background="@drawable/mybutton"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/F2"
+            android:rotation="90"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Z2"
+            android:text="Z"
+            android:textColor="@android:color/white"
+            android:padding="15dp"
+            android:textSize="22sp"
+            android:background="@drawable/secondbutton"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/A12"
+            android:rotation="90"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/A22"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:padding="15dp"
+            android:textSize="22sp"
+            android:background="@drawable/mybutton"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Z2"
+            android:rotation="90"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/N2"
+            android:text="N"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:padding="15dp"
+            android:background="@drawable/secondbutton"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/A22"
+            android:rotation="90"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goToLetterCounter"
+            android:background="@android:color/transparent"
+            android:text="Incepe jocul!"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inchis"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goToSayWord"
+            android:background="@android:color/transparent"
+            android:text="Spune cuvantul!"
+            android:textColor="@android:color/white"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opponentWord"
+            android:gravity="center"
+            android:background="@drawable/mybutton"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:inputType="text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:ems="8"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/opponentWord"
+            android:layout_marginTop="10dp"
+            android:id="@+id/opponentThinking"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inamicul se gandeste..."
+                android:id="@+id/opponentThinks"
+                android:layout_centerHorizontal="true"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/opponentThinks"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/opponentWord"
+            android:id="@+id/opponentPicks"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:id="@+id/opponentPicksALetter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="Inamicul alege o litera..."
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/opponentPicksALetter"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_green_dark"
+            android:padding="20dp"
+            android:id="@+id/letterSelected"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/firstPlayerWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:ems="8"
+            android:textStyle="normal"
+            android:background="@drawable/mybutton"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/F1"
+            android:text="F"
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/secondbutton"
+            android:layout_above="@+id/firstPlayerWord"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:rotation="270"
+            android:textSize="20dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/A1"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:padding="15dp"
+            android:background="@drawable/mybutton"
+            android:layout_above="@+id/F1"
+            android:layout_alignParentRight="true"
+            android:rotation="270"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Z1"
+            android:text="Z"
+            android:textColor="@android:color/white"
+            android:padding="15dp"
+            android:background="@drawable/secondbutton"
+            android:layout_above="@+id/A1"
+            android:layout_alignParentRight="true"
+            android:rotation="270"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/A21"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:padding="15dp"
+            android:background="@drawable/mybutton"
+            android:layout_above="@+id/Z1"
+            android:layout_alignParentRight="true"
+            android:rotation="270"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/N1"
+            android:textColor="@android:color/white"
+            android:text="N"
+            android:padding="15dp"
+            android:background="@drawable/secondbutton"
+            android:layout_above="@+id/A21"
+            android:layout_alignParentRight="true"
+            android:rotation="270"
+            android:textSize="20dp"
+            />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

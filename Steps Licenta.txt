@@ -1,0 +1,65 @@
+-------------------------------------------Plan realizare lucrare de licenta-----------------------------------------
+----------------------------------------------- Ciuciu Ioan - Dionisie ----------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+- Layouts
+	- 1. MainMenuLayout 
+			:buttons:
+				- Play Game -> Choose Opponent -> GameStarted -> TODO
+				- Settings -> 2. SettingsLayout
+					:buttons:
+					- Game difficulty
+					- Game Volume
+					- Developer info -> 3. DeveloperInfoLayout
+					- Auto connect Wi-fi (allows phone to connect to the closest wi-fi automatically, in multiplayer mode ;) )
+					- Auto save (saves the current state of the game when the application is closed :P)
+				- Multiplayer (optional) (unknown) ( kidnapped by aliens maybe)
+				- Guess your personality test (optional) -> 4. GuessYourPersonalityLayout
+					:text:
+						- Question1 -> Question2 -> Question3 -> Question4 -> 5. GuessYourPersonalityResultLayout
+							:buttons:
+								- yes
+								- no 
+								:text:
+									- "Your personality is " + result 
+								:buttons:
+									- Try the test again -> GuessYourPersonalityLayout
+									- Go back at Main Menu -> MainMenuLayout
+				- Exit Game -> 6. ExitGameLayout
+					:text:
+						- "Are you sure you want to leave"?
+							:buttons:
+								- Yes -> out of the game
+								- No -> MainMenuLayout
+				
+				
+			
+		
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+29.03.2018:
+
+	- Created MainMenu layout with all the buttons - not finished
+	
+30:03:2018:
+
+	- Created Game Difficulty ( + functionality) - finished
+	- Created ExitGameLayout ( + functionality) - finished
+	- Sent intent for game difficulty in PlayGameLayout, now it works
+	- Added veriffication if wi-fi is connected when going in Multiplayer
+	mode. (doesnt work yet to check if internet connection exists)
+	
+03.04.2018:
+
+	- Created game volume in settings (+ functionaltity) = finished
+	- Made the pick letter thing ( + functionality) = finished
+	- Improved design for "Choose game difficulty"
+	- Learned to play with gyroscope and accelerometer 
+	
+	
+

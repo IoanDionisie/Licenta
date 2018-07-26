@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Licenta</string>
+    <string-array name="gameDifficulties">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Nightmare</item>
+
+    </string-array>
+    <string name="title_activity_game_over">GameOver</string>
+</resources>

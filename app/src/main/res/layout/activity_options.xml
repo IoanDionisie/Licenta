@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgnd"
+    tools:context=".Settings">
+
+
+    <RelativeLayout
+        android:id="@+id/optionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        >
+
+        <Button
+            android:id="@+id/backToMainMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mybutton"
+            android:ems="10"
+            android:padding="10dp"
+            android:text="Inapoi la meniu" />
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="80dp"
+            android:ems="12"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Setari"
+            android:textColor="@android:color/black"
+            android:textSize="50sp" />
+
+
+        <TextView
+            android:id="@+id/gameVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/settingsTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:textColor="@android:color/white"
+            android:ems="8"
+            android:padding="10dp"
+            android:text="Volum in joc"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarSound"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/settingsTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/mybutton"
+            android:clickable="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameVolume"
+            android:layout_alignLeft="@id/gameVolume"
+            >
+
+            <TextView
+                android:id="@+id/gameDifficultyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/gameVolume"
+                android:layout_below="@id/gameVolume"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                android:text="Alege dificultatea jocului"
+                android:textColor="@android:color/white"
+                android:textSize="15dp" />
+
+            <Spinner
+                android:id="@+id/gameDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:contextClickable="true"
+                android:minHeight="37dp"
+                android:layout_marginTop="20dp">
+            </Spinner>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

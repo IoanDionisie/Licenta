@@ -1,0 +1,177 @@
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    android:background="@drawable/bgnd"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/checkWifi"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You must be online. Enable wi-fi?"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_marginTop="150dp"
+            android:id="@+id/enableWiFi"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yesWiFi"
+            android:text="Yes"
+            android:background="@android:color/holo_orange_light"
+            android:padding="10dp"
+            android:layout_below="@+id/enableWiFi"
+            android:layout_alignLeft="@+id/enableWiFi"
+            android:layout_marginTop="30dp"
+            android:ems="8"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noWiFi"
+            android:text="NO"
+            android:background="@android:color/holo_orange_light"
+            android:padding="10dp"
+            android:layout_below="@+id/enableWiFi"
+            android:layout_alignRight="@+id/enableWiFi"
+            android:layout_marginTop="30dp"
+            android:ems="8"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="0dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:id="@+id/textGameDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/secondbutton"
+            android:padding="6dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel de dificultate: "
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/showGameDificulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/logoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/textGameDifficulty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="FAZAN"
+            android:textColor="@android:color/white"
+            android:textSize="50sp" />
+
+
+        <Button
+            android:id="@+id/playGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/guessPersonality"
+            android:layout_alignRight="@id/guessPersonality"
+            android:layout_below="@+id/logoTop"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/mybutton"
+            android:text="Start joc" />
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/guessPersonality"
+            android:layout_alignRight="@id/guessPersonality"
+            android:layout_below="@+id/playGame"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/secondbutton"
+            android:text="Setari" />
+
+        <Button
+            android:id="@+id/multiplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/guessPersonality"
+            android:layout_alignRight="@id/guessPersonality"
+            android:layout_below="@id/settings"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/mybutton"
+            android:text="Multiplayer" />
+
+        <Button
+            android:id="@+id/guessPersonality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/multiplayer"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/secondbutton"
+            android:ems="12"
+            android:text="Ghiceste personalitatea" />
+
+        <Button
+            android:id="@+id/exitGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/guessPersonality"
+            android:layout_alignRight="@id/guessPersonality"
+            android:layout_below="@id/guessPersonality"
+            android:background="@drawable/mybutton"
+            android:text="Iesi din joc"
+
+            />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
