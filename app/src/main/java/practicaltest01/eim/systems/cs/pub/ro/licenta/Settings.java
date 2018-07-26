@@ -16,7 +16,7 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class Settings extends AppCompatActivity {
+public class Settings extends Activity {
 
     Button goBackToMainMenu;
     Spinner gameDifficulty;

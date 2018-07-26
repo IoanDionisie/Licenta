@@ -1,12 +1,13 @@
 package practicaltest01.eim.systems.cs.pub.ro.licenta;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ExitGame extends AppCompatActivity {
+public class ExitGame extends Activity {
     Button yes, no;
 
     private OnClickButtonListener onClickButtonListener =  new OnClickButtonListener();

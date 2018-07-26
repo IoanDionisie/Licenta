@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import java.util.Calendar;
 
-public class LetterCounterActivity extends AppCompatActivity {
+public class LetterCounterActivity extends Activity {
 
 
 

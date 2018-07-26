@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
@@ -19,7 +21,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class MainMenu extends AppCompatActivity {
+public class MainMenu extends Activity {
     private RelativeLayout checkWifi;
     private TextView gameDifficulty;
 
@@ -102,7 +104,15 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+
 
         mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);
         checkWifi = (RelativeLayout)findViewById(R.id.checkWifi);

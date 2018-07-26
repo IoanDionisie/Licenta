@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class SayWordActivity extends AppCompatActivity {
+public class SayWordActivity extends Activity {
 
     private TextView txvResult;
     private TextView hurryUp;

@@ -18,7 +18,7 @@ import com.transitionseverywhere.Transition;
 import com.transitionseverywhere.TransitionManager;
 import com.transitionseverywhere.TransitionValues;
 
-public class GameOver extends AppCompatActivity {
+public class GameOver extends Activity {
 
     Button playAgain, goToMainMenu;
 

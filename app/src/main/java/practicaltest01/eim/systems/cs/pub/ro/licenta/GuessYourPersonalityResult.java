@@ -1,9 +1,10 @@
 package practicaltest01.eim.systems.cs.pub.ro.licenta;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class GuessYourPersonalityResult extends AppCompatActivity {
+public class GuessYourPersonalityResult extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

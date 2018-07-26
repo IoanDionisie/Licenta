@@ -18,6 +18,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,7 +35,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.prefs.Preferences;
 
-public class PlayGame extends AppCompatActivity {
+public class PlayGame extends Activity {
 
     TextView gameDiff, letterCounterText, opponentWord, inchis;
     String gameDifficulty;
@@ -90,6 +92,12 @@ public class PlayGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        // Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_play_game);
 
         gameDiff = (TextView) findViewById(R.id.playGameGameDiff);
